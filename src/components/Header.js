@@ -1,6 +1,38 @@
-import React from "react";
+import React, { useRef } from "react";
+import { db } from "../firebase/firebaseinit";
+import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
+import toast from "react-hot-toast";
 
 export default function Header() {
+  const emailRef = useRef();
+
+  const subscribe = async (e) => {
+    e.preventDefault();
+    if (!emailRef.current.value) {
+      toast.error("Please enter an email");
+      return;
+    }
+    const email = emailRef.current.value;
+
+    // check if email has not already been sent
+    const q = query(collection(db, "subscribers"), where("email", "==", email));
+    if ((await getDocs(q)).docs.length > 0) {
+      toast.error("Email already subscribed");
+      return;
+    }
+
+    try {
+      await addDoc(collection(db, "subscribers"), {
+        email,
+      });
+      toast.success("Subscribed successfully");
+    } catch (e) {
+      toast.error(
+        "There was an error subscribing you. Please try again later."
+      );
+    }
+  };
+
   return (
     <section className="relative py-10 overflow-hidden bg-black sm:py-16 lg:py-24 xl:py-52">
       <div className="absolute inset-0">
@@ -26,7 +58,12 @@ export default function Header() {
             Be the first to get notified when registration opens.
           </p>
 
-          <form action="#" method="POST" className="mt-8 lg:mt-12">
+          <form
+            action="#"
+            method="POST"
+            className="mt-8 lg:mt-12"
+            onSubmit={(e) => subscribe(e)}
+          >
             <div className="flex flex-col items-center sm:flex-row sm:justify-center">
               <div className="flex-1 w-full min-w-0 px-4 sm:px-0">
                 <div className="relative text-gray-400 focus-within:text-gray-600">
@@ -48,6 +85,7 @@ export default function Header() {
                     </svg>
                   </div>
                   <input
+                    ref={emailRef}
                     type="email"
                     name="email"
                     id="email"

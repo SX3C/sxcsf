@@ -4,6 +4,12 @@ import { Link } from "react-router-dom";
 export default function Results() {
   return (
     <div>
+      <Link to="/">
+        <button className="absolute top-4 left-4 bg-gray-800 text-white px-4 py-2 rounded-md">
+          Home
+        </button>
+      </Link>
+
       <section class="py-10 sm:py-16 lg:py-24">
         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div class="max-w-2xl mx-auto text-center">

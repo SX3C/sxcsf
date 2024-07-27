@@ -3,10 +3,12 @@ import Home from "./pages/Home";
 import Results from "./pages/Results";
 import SubjectChoose from "./pages/SubjectChoose";
 import ResultsDisp from "./pages/ResultsDisp";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <div className="font-lora bg-[#f5f5dc]">
+      <Toaster position={"top-center"} />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
