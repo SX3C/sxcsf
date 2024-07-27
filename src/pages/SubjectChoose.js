@@ -13,15 +13,22 @@ export default function SubjectChoose() {
 
   return (
     <div>
+      {/* Back button wtih absolute positioning on top left */}
+      <Link to="/results">
+        <button className="absolute top-4 left-4 bg-gray-800 text-white px-4 py-2 rounded-md">
+          Back
+        </button>
+      </Link>
+
       <section className="py-10 sm:py-16 lg:py-24">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
               Choose a Subject
             </h2>
-            <p className="max-w-md mx-auto mt-4 text-base leading-relaxed text-gray-600">
-              Results for the Event Appear here
-            </p>
+            <div className="text-3xl text-center mt-4">
+              for Round {params.roundid}{" "}
+            </div>
           </div>
 
           <div className="grid max-w-2xl gap-4 mx-auto grid-cols-2 mt-14">
