@@ -19,6 +19,40 @@ function Home() {
         <CountdownWidget />
       </div>
 
+      <div className="mt-20 text-center">
+        Contact Details for Immediate Queries.
+        <div>
+          <i>President, SX3C</i>
+          <div className="text-2xl">
+            <b> Bipul Kharel </b> +977 9749794884
+          </div>
+        </div>
+        <div>
+          <i>President, SXC Physics Club </i>
+          <div className="text-2xl">
+            <b> Samrat Acharya </b> +977 9748274575
+          </div>
+        </div>
+        <div>
+          <i>President, Sodalitas de Mathematica </i>
+          <div className="text-2xl">
+            <b> Osish Niraula </b> +977 9804395642
+          </div>
+        </div>
+        <div>
+          <i>President, Club de Chemia </i>
+          <div className="text-2xl">
+            <b> Krishna Dev Yadav </b> +977 9817773148
+          </div>
+        </div>
+        <div>
+          <i>President, SXC Ecosphere Club </i>
+          <div className="text-2xl">
+            <b> Aayushma Shrestha </b> +977 9766857475
+          </div>
+        </div>
+      </div>
+
       <section className="py-10 sm:py-16 lg:py-24">
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="grid items-center grid-cols-1 gap-y-8 lg:grid-cols-2 gap-x-16 xl:gap-x-24">

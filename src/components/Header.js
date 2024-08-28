@@ -51,13 +51,24 @@ export default function Header() {
 
       <div className="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="text-center md:w-2/3 lg:w-1/2 xl:w-2/4 md:text-left">
-          <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl text-left">
             2<sup>nd</sup> SXC Science Fest
           </h2>
-          <p className="mt-4 text-base text-gray-200">
-            Be the first to get notified when registration opens.
+          <p className="mt-4 text-base text-gray-200 mb-4 text-left flex flex-col sm:flex-row">
+            <span>Registration has opened! &nbsp;</span>
+            <span> Register now to participate. </span>
           </p>
 
+          {/* Link to a form */}
+          <div className="flex items-start">
+            <a
+              href="https://forms.gle/YXoFq2tqtcD3xueC9"
+              target="_blank"
+              className="px-8 py-2 mx-2 font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:bg-blue-700 "
+            >
+              Open
+            </a>
+          </div>
           <form
             action="#"
             method="POST"
@@ -89,7 +100,7 @@ export default function Header() {
                     type="email"
                     name="email"
                     id="email"
-                    placeholder="Enter email address"
+                    placeholder="Enter email for updates"
                     className="block w-full py-4 pl-10 pr-4 text-base text-black placeholder-gray-500 transition-all duration-200 border-gray-200 rounded-md sm:rounded-r-none caret-blue-600 focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
                     required
                   />
