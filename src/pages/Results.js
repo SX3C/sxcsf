@@ -24,7 +24,9 @@ export default function Results() {
             </p>
           </div>
 
-          <div class="grid max-w-2xl gap-4 mx-auto grid-cols-2 mt-14">
+
+      <div className="max-w-2xl mx-auto">
+          <div class="grid gap-4 grid-cols-2 mt-14">
             <Link to="/results/1">
               <div class="overflow-hidden bg-white border-2  border-gray-200 rounded-md py-20 text-center">
                 <p class="text-6xl font-medium tracking-tight">RI</p>
@@ -53,6 +55,13 @@ export default function Results() {
               </div>
             </Link>
           </div>
+
+          <Link to="/scanner-result">
+            <button className="bg-gray-800 text-white px-4 py-2 rounded-md w-full mt-4">
+              View Result Using Scanner
+            </button>
+          </Link>            
+      </div>
         </div>
       </section>
     </div>

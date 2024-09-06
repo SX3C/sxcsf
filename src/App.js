@@ -4,6 +4,7 @@ import Results from "./pages/Results";
 import SubjectChoose from "./pages/SubjectChoose";
 import ResultsDisp from "./pages/ResultsDisp";
 import { Toaster } from "react-hot-toast";
+import ScannerResult from "./pages/ScannerResult";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/scanner-result" element={<ScannerResult />} />
           <Route path="/results" element={<Results />} />
           <Route path="/results/:roundid" element={<SubjectChoose />} />
           <Route
