@@ -138,8 +138,9 @@ export default function ScannerResult() {
                     </div>
 
                     <Scanner onScan={(result) => {
-                        console.log(result);
-                        getTeamByTeamCode(result);
+                        if (result.length != 0) {
+                            getTeamByTeamCode(result[0].rawValue);
+                        }
                         setShowModal(false);
                     }} />
                 </div>
