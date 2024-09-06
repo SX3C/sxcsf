@@ -47,11 +47,6 @@ export default function ScannerResult() {
                             Find your result by scanning your QR Code
                         </p>
                     </div>
-
-                    <div class="grid max-w-2xl gap-4 mx-auto grid-cols-2 mt-14">
-                        Scanner results appear here
-                    </div>
-
                 </div>
                 <div className="max-w-2xl mx-auto mt-4 p-4">
                     <input className="outline-1 px-10 py-5" ref={itemRef} placeholder="Enter Team Code" />
@@ -139,6 +134,7 @@ export default function ScannerResult() {
 
                     <Scanner onScan={(result) => {
                         if (result.length != 0) {
+                            console.log(result[0].rawValue);
                             getTeamByTeamCode(result[0].rawValue);
                         }
                         setShowModal(false);
