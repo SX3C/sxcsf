@@ -63,7 +63,7 @@ function Home() {
               {/* https://sxc.edu.np/uploads/gallery/P1196560-file-20230904091332-557.JPG */}
               <img
                 className="w-full rounded-md"
-                src="/event-photos/main.JPG"
+                src="/event-photos/main-banner.png"
                 alt=""
               />
 
