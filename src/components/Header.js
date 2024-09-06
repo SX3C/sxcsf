@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { db } from "../firebase/firebaseinit";
 import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const emailRef = useRef();
@@ -55,19 +56,19 @@ export default function Header() {
             2<sup>nd</sup> SXC Science Fest
           </h2>
           <p className="mt-4 text-base text-gray-200 mb-4 text-left flex flex-col sm:flex-row">
-            <span>Registration has opened! &nbsp;</span>
-            <span> Register now to participate. </span>
+            <span>The event is here! &nbsp;</span>
+            <span> View the Results Here </span>
           </p>
 
           {/* Link to a form */}
           <div className="flex items-start">
-            <a
-              href="https://forms.gle/YXoFq2tqtcD3xueC9"
-              target="_blank"
+            <Link to="/results">
+            <button
               className="px-8 py-2 mx-2 font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:bg-blue-700 "
             >
-              Open
-            </a>
+              Open Results
+            </button>
+            </Link>
           </div>
           <form
             action="#"
