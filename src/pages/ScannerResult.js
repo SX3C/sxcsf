@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { doc, getDoc, collection } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 import { Link } from "react-router-dom";
 import { db } from "../firebase/firebaseinit";
 import toast from "react-hot-toast";
@@ -31,9 +31,9 @@ export default function ScannerResult() {
 
     return (
         <div>
-            <Link to="/">
+            <Link to="/results">
                 <button className="absolute top-4 left-4 bg-gray-800 text-white px-4 py-2 rounded-md">
-                    Home
+                    Back
                 </button>
             </Link>
 
@@ -133,8 +133,7 @@ export default function ScannerResult() {
                     </div>
 
                     <Scanner onScan={(result) => {
-                        if (result.length != 0) {
-                            console.log(result[0].rawValue);
+                        if (result.length !== 0) {
                             getTeamByTeamCode(result[0].rawValue);
                         }
                         setShowModal(false);
