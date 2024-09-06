@@ -1,7 +1,14 @@
 import Header from "../components/Header";
 import CountdownWidget from "../components/CountdownWidget";
+import { useState } from "react";
+import Modal from "react-modal";
+import { Link } from "react-router-dom";
+
+Modal.setAppElement("#root");
 
 function Home() {
+  const [showPopup, setShowPopup] = useState(true);
+
   return (
     <div className="font-lora">
       <div className="sticky top-0 z-20">
@@ -112,6 +119,54 @@ function Home() {
           </div>
         </div>
       </section>
+      <Modal
+        isOpen={showPopup}
+        onRequestClose={() => setShowPopup(false)}
+        style={{
+          content: {
+            top: "50%",
+            left: "50%",
+            right: "auto",
+            bottom: "auto",
+            marginRight: "-50%",
+            transform: "translate(-50%, -50%)",
+          },
+        }}
+        contentLabel="Example Modal"
+      >
+        <div className="font-lora">
+          {/* <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2> */}
+          <div className="flex justify-between">
+            <div className="text-2xl font-bold"> Event Presented By: </div>
+            <button
+              className="bg-gray-800 text-white px-4 py-2 rounded-md"
+              onClick={() => setShowPopup(false)}
+            >
+              Close
+            </button>
+          </div>
+
+          <div className="flex flex-col md:flex-row items-center">
+            <img src="/event-photos/gurukul.png" className="w-80" />
+            <img src="/event-photos/hamro.png" className="w-40" />
+          </div>
+          <div className="bg-gray-800 text-white px-4 py-2 rounded-md mt-4 text-center">
+            <a
+              href="https://gurukulca.edu.np/"
+              target="_blank"
+              rel="noreferrer"
+              className="w-full"
+            >
+              Visit Sponsors
+            </a>
+          </div>
+          <Link to="/results">
+            <button className="bg-gray-800 text-white px-4 py-2 rounded-md w-full mt-4">
+              View Results for Rounds
+            </button>
+          </Link>
+        </div>
+      </Modal>
     </div>
   );
 }
