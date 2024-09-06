@@ -53,7 +53,7 @@ export default function ScannerResult() {
                     </div>
 
                 </div>
-                <div className="max-w-2xl mx-auto mt-4">
+                <div className="max-w-2xl mx-auto mt-4 p-4">
                     <input className="outline-1 px-10 py-5" ref={itemRef} placeholder="Enter Team Code" />
                     <button className="px-4 bg-gray-800 py-2 rounded-lg text-white ml-4" onClick={() => getTeamByTeamCode(itemRef.current.value)}> Fetch </button>
                     <button onClick={() => setShowModal(true)} className="bg-gray-800 text-white px-4 py-2 rounded-md w-full mt-4">
@@ -80,7 +80,7 @@ export default function ScannerResult() {
                             <div className="mt-4"> Team Advancement Details </div>
 
 
-                            <div class="grid gap-4 grid-cols-2 mt-4">
+                            <div class="grid gap-4 grid-cols-2 mt-4 p-4">
                                 {
                                     ['round1', 'round2', 'round3', 'round4'].map((selection) =>
                                         <div class="overflow-hidden rounded-md py-10 text-center"
@@ -138,6 +138,7 @@ export default function ScannerResult() {
                     </div>
 
                     <Scanner onScan={(result) => {
+                        console.log(result);
                         getTeamByTeamCode(result);
                         setShowModal(false);
                     }} />
