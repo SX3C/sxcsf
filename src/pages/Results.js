@@ -32,12 +32,12 @@ export default function Results() {
           </Link>            
 
 
-
           <div class="grid gap-4 grid-cols-2 mt-14">
             <Link to="/results/1">
               <div class="overflow-hidden bg-white border-2  border-gray-200 rounded-md py-20 text-center">
                 <p class="text-6xl font-medium tracking-tight">RI</p>
                 <p>Round One</p>
+                <p>.. to be publised soon </p>
               </div>
             </Link>
 
