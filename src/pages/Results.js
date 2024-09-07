@@ -31,7 +31,9 @@ export default function Results() {
             </button>
           </Link>            
 
-
+        <div className="mt-4">
+            Click <a className="text-blue-500" href="https://drive.google.com/file/d/1xqozvF0HDXUHXet7NIpPOQxXY-c7gNny/view?usp=sharing"> here </a> for a file based result of Round II
+        </div>
           <div class="grid gap-4 grid-cols-2 mt-14">
             <Link to="/results/1">
               <div class="overflow-hidden bg-white border-2  border-gray-200 rounded-md py-20 text-center">
@@ -45,7 +47,6 @@ export default function Results() {
                 <p class="text-6xl font-medium tracking-tight">RII</p>
                 <p>Round Two</p>
                 <p className="mt-2">Published</p>
-
               </div>
             </Link>
 
