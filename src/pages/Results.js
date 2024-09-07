@@ -37,7 +37,6 @@ export default function Results() {
               <div class="overflow-hidden bg-white border-2  border-gray-200 rounded-md py-20 text-center">
                 <p class="text-6xl font-medium tracking-tight">RI</p>
                 <p>Round One</p>
-                <p>.. to be publised soon </p>
               </div>
             </Link>
 
@@ -45,6 +44,8 @@ export default function Results() {
               <div class="overflow-hidden bg-white border-2  border-gray-200 rounded-md py-20 text-center">
                 <p class="text-6xl font-medium tracking-tight">RII</p>
                 <p>Round Two</p>
+                <p className="mt-2">Published</p>
+
               </div>
             </Link>
 
