@@ -31,6 +31,11 @@ export default function Results() {
             </button>
           </Link>             */}
 
+
+        <div>
+          <img className="w-full" src="/forround4.PNG" />
+        </div>
+
         <div className="mt-4">
             Click <a className="text-blue-500" href="https://docs.google.com/spreadsheets/d/1Zph78rgH7iuBACZfiVFxSw1-q8hPJhX_HVn2e6iLlEU/edit?usp=sharing"> here </a> for a file based result of Round II
         </div>
