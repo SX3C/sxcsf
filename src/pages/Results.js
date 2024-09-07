@@ -25,16 +25,21 @@ export default function Results() {
           </div>
 
           <div className="max-w-2xl mx-auto">
-            <Link to="/scanner-result">
+            {/* <Link to="/scanner-result">
             <button className="bg-gray-800 text-white px-4 py-2 rounded-md w-full mt-4">
               View Result Using Scanner
             </button>
-          </Link>            
+          </Link>             */}
 
         <div className="mt-4">
-            Click <a className="text-blue-500" href="https://drive.google.com/file/d/1xqozvF0HDXUHXet7NIpPOQxXY-c7gNny/view?usp=sharing"> here </a> for a file based result of Round II
+            Click <a className="text-blue-500" href="https://docs.google.com/spreadsheets/d/1Zph78rgH7iuBACZfiVFxSw1-q8hPJhX_HVn2e6iLlEU/edit?usp=sharing"> here </a> for a file based result of Round II
         </div>
-          <div class="grid gap-4 grid-cols-2 mt-14">
+
+        <br/>
+
+        Due to Systems Overload, we will not be able to show the results in the desired format today.
+
+          {/* <div class="grid gap-4 grid-cols-2 mt-14">
             <Link to="/results/1">
               <div class="overflow-hidden bg-white border-2  border-gray-200 rounded-md py-20 text-center">
                 <p class="text-6xl font-medium tracking-tight">RI</p>
@@ -63,7 +68,7 @@ export default function Results() {
                 <p>Round Four</p>
               </div>
             </Link>
-          </div>
+          </div> */}
 
           
       </div>
