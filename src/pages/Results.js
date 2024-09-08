@@ -32,11 +32,15 @@ export default function Results() {
           </Link>             */}
 
             <div className="flex mt-8 flex-col items-center justify-center">
-              
-            RESULTS FOR RIV    
+
+              SEMI FINAL PARTICIPANTS
+             <div className="mt-4 flex items-center justify-center">
+            <img className="w-full" src="/semi-finals-participants.PNG" />
+        </div> 
+            {/* RESULTS FOR RIV    
         <div className="mt-4 flex items-center justify-center">
             <img className="w-full md:w-1/2" src="/results-r4.PNG" />
-        </div>
+        </div> */}
             </div>
 
 
