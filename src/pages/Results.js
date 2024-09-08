@@ -31,14 +31,22 @@ export default function Results() {
             </button>
           </Link>             */}
 
+            <div className="flex mt-8 flex-col items-center justify-center">
+              
+            RESULTS FOR RIV    
+        <div className="mt-4 flex items-center justify-center">
+            <img className="w-full md:w-1/2" src="/results-r4.PNG" />
+        </div>
+            </div>
 
-        <div>
+
+        {/* <div className="mt-4">
           <img className="w-full" src="/forround4.PNG" />
         </div>
 
         <div className="mt-4">
             Click <a className="text-blue-500" href="https://docs.google.com/spreadsheets/d/1Zph78rgH7iuBACZfiVFxSw1-q8hPJhX_HVn2e6iLlEU/edit?usp=sharing"> here </a> for a file based result of Round II
-        </div>
+        </div> */}
 
         <br/>
 
