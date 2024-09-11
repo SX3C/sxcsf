@@ -5,6 +5,7 @@ import SubjectChoose from "./pages/SubjectChoose";
 import ResultsDisp from "./pages/ResultsDisp";
 import { Toaster } from "react-hot-toast";
 import ScannerResult from "./pages/ScannerResult";
+import Semifinalists from "./pages/Semifinalists";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/scanner-result" element={<ScannerResult />} />
+          <Route path="/results/semifinalists" element={<Semifinalists />} />
           <Route path="/results" element={<Results />} />
           <Route path="/results/:roundid" element={<SubjectChoose />} />
           <Route
