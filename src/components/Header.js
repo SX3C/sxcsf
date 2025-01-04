@@ -37,10 +37,9 @@ export default function Header() {
   return (
     <section className="relative py-10 overflow-hidden bg-black sm:py-16 lg:py-24 xl:py-52">
       <div className="absolute inset-0">
-        {/* https://sxc.edu.np/uploads/gallery/P1196503-file-20230904091313-5.JPG */}
         <img
           className="object-cover w-full h-full md:scale-150 object-center"
-          src="https://sxc.edu.np/uploads/gallery/P1196503-file-20230904091313-5.JPG "
+          src="/event-photos/banner-image.png"
           alt=""
         />
       </div>
